@@ -1,0 +1,27 @@
+{
+  "name": "pulsemetrics",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Real-Time Analytics & Event Intelligence Platform",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "dev:web": "turbo run dev --filter=@pulsemetrics/web",
+    "dev:api": "turbo run dev --filter=@pulsemetrics/api",
+    "dev:worker": "turbo run dev --filter=@pulsemetrics/worker",
+    "db:generate": "turbo run db:generate --filter=@pulsemetrics/api",
+    "db:migrate": "turbo run db:migrate --filter=@pulsemetrics/api",
+    "db:seed": "turbo run db:seed --filter=@pulsemetrics/api",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\""
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@10.13.1"
+}

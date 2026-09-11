@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-background":"#0b1c30","on-secondary-container":"#5f626e","tertiary-container":"#007d55","on-primary":"#ffffff","tertiary":"#006242","on-error-container":"#93000a","primary":"#004ac6","surface-tint":"#0053db","on-secondary":"#ffffff","on-primary-fixed-variant":"#003ea8","on-tertiary-fixed-variant":"#005236","secondary":"#5a5e69","on-tertiary":"#ffffff","primary-fixed-dim":"#b4c5ff","tertiary-fixed":"#6ffbbe","surface-container-lowest":"#ffffff","surface-container-high":"#dce9ff","on-tertiary-container":"#bdffdb","secondary-fixed-dim":"#c3c6d3","primary-container":"#2563eb","surface-container-low":"#eff4ff","on-primary-container":"#eeefff","surface-variant":"#d3e4fe","secondary-fixed":"#dfe2ef","inverse-primary":"#b4c5ff","on-secondary-fixed-variant":"#434751","on-primary-fixed":"#00174b","surface-container-highest":"#d3e4fe","on-surface":"#0b1c30","outline":"#737686","background":"#f8f9ff","inverse-surface":"#213145","on-tertiary-fixed":"#002113","outline-variant":"#c3c6d7","on-error":"#ffffff","on-surface-variant":"#434655","on-secondary-fixed":"#181b25","surface-container":"#e5eeff","inverse-on-surface":"#eaf1ff","error-container":"#ffdad6","surface":"#f8f9ff","primary-fixed":"#dbe1ff","error":"#ba1a1a","tertiary-fixed-dim":"#4edea3","secondary-container":"#dcdfed","surface-dim":"#cbdbf5","surface-bright":"#f8f9ff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-sm":"0.375rem","space-lg":"1rem","gutter":"0.75rem","margin":"1.25rem","space-md":"0.75rem","space-xl":"1.5rem","space-xs":"0.25rem"},fontFamily:{"label-lg":["JetBrains Mono"],"body-md":["Inter"],"label-sm":["JetBrains Mono"],"body-lg":["Inter"],"body-sm":["Inter"],"headline-md":["Inter"],"label-md":["JetBrains Mono"],"headline-lg":["Inter"],"headline-sm":["Inter"]},fontSize:{"label-lg":["13px",{lineHeight:"16px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"400"}],"body-lg":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"headline-md":["18px",{lineHeight:"24px",letterSpacing:"-0.015em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0",fontWeight:"500"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["14px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between select-none shadow-md"><div class="flex flex-col h-full overflow-hidden"><div class="p-space-md pb-space-sm"><div class="flex items-center justify-between gap-space-xs mb-space-sm"><div class="flex items-center gap-space-xs"><img alt="PulseMetrics Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XcFHIvOm5fKyR84maeHkRhCFOAaFesuLJZqBDCtO_Xc6ZJAmdkmzsn5NbzhM6QpSl0ziO-VZRjmZCiay644MJKewEHJZ3KWo2Pm1nYDYJ-24kK1iRqYVdslPf5Mzw4Zdb-uIJVYsTN2Z2KnPErTXYqmVC-QRefO394lIz5g6nDPJfvV8BF4BK3UUtz04ajPaAyV0UDEs1fWEwG3Z9MCdS4yyMBB4x8hGL3l3kGIQES8AoZHlwE8ZKRsw"/><span class="font-headline-sm text-headline-sm text-surface font-bold tracking-tight">PulseMetrics</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface/10 text-tertiary-fixed font-mono border border-surface/10">v2.5.0</span></div><button class="w-full flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 hover:bg-surface/10 text-inverse-on-surface font-label-md text-label-md transition-colors" type="button"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span><span class="font-mono font-medium text-surface">acme-prod-east</span></div><span class="material-symbols-outlined text-[16px] text-surface-variant">unfold_more</span></button><div class="mt-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 text-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">search</span><span>KQL / Trace jump...</span></div><kbd class="px-1.5 py-0.5 rounded bg-surface/10 text-inverse-on-surface font-mono text-[10px]">⌘K</kbd></div></div></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-xs space-y-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Telemetry &amp; Ingestion</div><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span>Dashboard</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="real-time" href="#"><span>Real-Time</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="event-pipeline" href="#"><span>Event Pipeline</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="events-explorer" href="#"><span>Events Explorer</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="distributed-trace-waterfall" href="#"><span>Distributed Trace Waterfall</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Analytics &amp; Product</div><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="funnels-retention-matrix" href="#"><span>Funnels &amp; Retention Matrix</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Operations &amp; Alerts</div><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="alerts-incident-management" href="#"><span>Alerts &amp; Incident Management</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Platform &amp; Developer</div><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="sdk-integration-schema-registry" href="#"><span>SDK Integration &amp; Schema Registry</span></a></div></nav></div><div class="p-space-sm bg-inverse-surface/80"><div class="px-space-sm py-1.5 mb-1.5 rounded bg-surface/5 flex items-center justify-between font-label-sm text-label-sm text-surface-variant"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-tertiary-fixed">domain</span><span class="text-inverse-on-surface font-medium">Acme Global Org</span><span class="text-[10px] uppercase font-mono px-1 py-0.2 rounded bg-surface/10 text-primary-fixed">Enterprise</span></div><span class="material-symbols-outlined text-[14px]">expand_more</span></div><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface/10 transition-colors cursor-pointer"><div class="flex items-center gap-2"><div class="relative"><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-headline-sm text-headline-sm text-primary font-bold">AC</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tertiary-fixed border-2 border-inverse-surface rounded-full"></span></div><div class="flex flex-col"><span class="font-headline-sm text-[12px] leading-tight text-surface font-semibold">Alex Chen</span><span class="font-label-sm text-[10px] leading-tight text-surface-variant font-mono">Principal Infra SRE</span></div></div><span class="material-symbols-outlined text-[16px] text-surface-variant">more_vert</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-14 bg-surface/90 backdrop-blur-md z-40 px-6 flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="PulseMetrics Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XcFHIvOm5fKyR84maeHkRhCFOAaFesuLJZqBDCtO_Xc6ZJAmdkmzsn5NbzhM6QpSl0ziO-VZRjmZCiay644MJKewEHJZ3KWo2Pm1nYDYJ-24kK1iRqYVdslPf5Mzw4Zdb-uIJVYsTN2Z2KnPErTXYqmVC-QRefO394lIz5g6nDPJfvV8BF4BK3UUtz04ajPaAyV0UDEs1fWEwG3Z9MCdS4yyMBB4x8hGL3l3kGIQES8AoZHlwE8ZKRsw"/><div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant font-mono"><span class="text-on-surface font-semibold">acme-prod-east</span><span class="text-outline-variant">/</span><span>ingestion-pool</span><span class="text-outline-variant">/</span><span class="text-primary font-semibold">telemetry-v2</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-2.5 py-1 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-mono"><span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span><span>24,812 ev/s</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono"><span class="material-symbols-outlined text-[14px]">dns</span><span>us-east-1 (p99: 11ms)</span></div><div class="flex items-center gap-space-xs"><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-14 bg-surface min-h-screen px-7 py-7"><div class="flex flex-col w-full gap-space-md">
+<!-- Query Bar & Console Controls -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">terminal</span>
+<span class="font-semibold tracking-wide">PQL CONSOLE</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">Engine:</span>
+<span>ClickHouse Direct (Distributed 128-node)</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-mono">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>18.4ms</span>
+<span class="text-on-surface-variant font-sans">• 1.42B rows scanned (8.92 GB/s)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<!-- Live stream toggle -->
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-tertiary text-on-tertiary font-label-sm text-label-sm shadow-sm hover:opacity-90 transition-all" id="live-stream-btn" type="button">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary"></span>
+</span>
+<span>Live Tail (ON)</span>
+</button>
+<!-- Time Range Picker -->
+<div class="flex items-center rounded-lg bg-surface-container-low px-2.5 py-1 text-on-surface font-label-md text-label-md gap-2">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">schedule</span>
+<span class="font-semibold">Last 15m</span>
+<span class="text-on-surface-variant font-mono text-[11px]">(14:15:00 → 14:30:00 UTC)</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">expand_more</span>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm hover:bg-surface-tint shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Run Query</span>
+<kbd class="ml-1 px-1 py-0.2 rounded bg-surface-container-lowest/20 font-label-sm text-[10px]">⌘↩</kbd>
+</button>
+</div>
+</div>
+<!-- PQL Syntax Highlighted Area -->
+<div class="relative flex items-center bg-surface-container-low rounded-lg p-2.5 shadow-inner">
+<div class="flex-1 font-label-md text-label-md overflow-x-auto whitespace-pre font-mono leading-relaxed select-text">
+<span class="text-primary font-bold">SELECT</span> <span class="text-on-surface">timestamp, event_name, user_id, properties.checkout_total</span> <span class="text-primary font-bold">WHERE</span> <span class="text-on-surface">status_code &gt;=</span> <span class="text-error font-semibold">400</span> <span class="text-primary font-bold">AND</span> <span class="text-on-surface">cluster =</span> <span class="text-tertiary font-semibold">'us-east-1'</span> <span class="text-primary font-bold">| STATS</span> <span class="text-on-secondary-container">count()</span> <span class="text-primary font-bold">BY</span> <span class="text-on-secondary-container">bin(10s), error_type</span>
+</div>
+<div class="flex items-center gap-1.5 pl-3 border-l-0">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Format Query" type="button">
+<span class="material-symbols-outlined text-[16px]">auto_fix_high</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Save Filter Preset" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Copy PQL" type="button">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Active Filter Pills & Autocomplete Badges -->
+<div class="flex items-center gap-space-xs flex-wrap font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-mono">Applied Filters:</span>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full text-on-surface">
+<span class="text-on-surface-variant font-mono">cluster:</span>
+<span class="font-semibold text-primary">us-east-1</span>
+<span class="material-symbols-outlined text-[13px] cursor-pointer text-on-surface-variant hover:text-error">close</span>
+</div>
+<div class="flex items-center gap-1 bg-error-container/60 px-2 py-0.5 rounded-full text-on-error-container">
+<span class="font-mono">status_code:</span>
+<span class="font-semibold">≥ 400</span>
+<span class="material-symbols-outlined text-[13px] cursor-pointer hover:text-error">close</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full text-on-surface">
+<span class="text-on-surface-variant font-mono">env:</span>
+<span class="font-semibold text-tertiary">production</span>
+<span class="material-symbols-outlined text-[13px] cursor-pointer text-on-surface-variant hover:text-error">close</span>
+</div>
+<button class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary hover:bg-primary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[13px]">add</span>
+<span>Add Filter (KQL)</span>
+</button>
+<span class="ml-auto text-on-surface-variant font-mono text-[11px]">Sampling: 100% (Lossless Telemetry Stream)</span>
+</div>
+</div>
+<!-- Dual-Axis Stacked Histogram & Scrub Range Bar -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Event Ingestion Volume</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">10s Buckets</span>
+</div>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-xs bg-primary"></span>
+<span class="text-on-surface-variant">2xx/3xx Success (3,420,119)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-xs bg-error"></span>
+<span class="text-on-surface-variant font-semibold text-error">4xx/5xx Failures (14,892 • 0.43%)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span>Zoom:</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high font-semibold text-on-surface">15m</span>
+<span class="px-1.5 py-0.5 rounded hover:bg-surface-container cursor-pointer">1h</span>
+<span class="px-1.5 py-0.5 rounded hover:bg-surface-container cursor-pointer">6h</span>
+<span class="px-1.5 py-0.5 rounded hover:bg-surface-container cursor-pointer">24h</span>
+</div>
+</div>
+<!-- Inline SVG High-Density Histogram -->
+<div class="relative w-full h-20 bg-surface-container-low rounded-lg p-2 overflow-hidden flex flex-col justify-end">
+<svg class="w-full h-14 overflow-visible" preserveaspectratio="none" viewbox="0 0 720 60">
+<!-- Gridlines -->
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="2 3" x1="0" x2="720" y1="15" y2="15"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="2 3" x1="0" x2="720" y1="35" y2="35"></line>
+<!-- Stacked Volume Bars (72 buckets across 15 min) -->
+<!-- Grouping with Primary Bars + Error spikes in Error color -->
+<g class="transition-all duration-300">
+<rect fill="#2563eb" height="36" rx="1" width="7" x="0" y="24"></rect>
+<rect fill="#ba1a1a" height="2" rx="0.5" width="7" x="0" y="22"></rect>
+<rect fill="#2563eb" height="42" rx="1" width="7" x="10" y="18"></rect>
+<rect fill="#ba1a1a" height="2" rx="0.5" width="7" x="10" y="16"></rect>
+<rect fill="#2563eb" height="38" rx="1" width="7" x="20" y="22"></rect>
+<rect fill="#2563eb" height="45" rx="1" width="7" x="30" y="15"></rect>
+<rect fill="#ba1a1a" height="2" rx="0.5" width="7" x="30" y="13"></rect>
+<rect fill="#2563eb" height="40" rx="1" width="7" x="40" y="20"></rect>
+<rect fill="#2563eb" height="35" rx="1" width="7" x="50" y="25"></rect>
+<rect fill="#2563eb" height="46" rx="1" width="7" x="60" y="14"></rect>
+<rect fill="#2563eb" height="48" rx="1" width="7" x="70" y="12"></rect>
+<rect fill="#ba1a1a" height="3" rx="0.5" width="7" x="70" y="9"></rect>
+<rect fill="#2563eb" height="40" rx="1" width="7" x="80" y="20"></rect>
+<rect fill="#2563eb" height="41" rx="1" width="7" x="90" y="19"></rect>
+<rect fill="#2563eb" height="44" rx="1" width="7" x="100" y="16"></rect>
+<rect fill="#2563eb" height="38" rx="1" width="7" x="110" y="22"></rect>
+<rect fill="#2563eb" height="32" rx="1" width="7" x="120" y="28"></rect>
+<rect fill="#2563eb" height="45" rx="1" width="7" x="130" y="15"></rect>
+<rect fill="#2563eb" height="50" rx="1" width="7" x="140" y="10"></rect>
+<rect fill="#ba1a1a" height="4" rx="0.5" width="7" x="140" y="6"></rect>
+<!-- Middle Scrub Range (Highlighted interval) -->
+<rect fill="#2563eb" height="46" rx="1" width="7" x="150" y="14"></rect>
+<rect fill="#2563eb" height="48" rx="1" width="7" x="160" y="12"></rect>
+<rect fill="#2563eb" height="52" rx="1" width="7" x="170" y="8"></rect>
+<rect fill="#ba1a1a" height="5" rx="0.5" width="7" x="170" y="3"></rect>
+<rect fill="#2563eb" height="44" rx="1" width="7" x="180" y="16"></rect>
+<rect fill="#2563eb" height="38" rx="1" width="7" x="190" y="22"></rect>
+<rect fill="#2563eb" height="42" rx="1" width="7" x="200" y="18"></rect>
+<rect fill="#2563eb" height="47" rx="1" width="7" x="210" y="13"></rect>
+<rect fill="#2563eb" height="49" rx="1" width="7" x="220" y="11"></rect>
+<rect fill="#2563eb" height="41" rx="1" width="7" x="230" y="19"></rect>
+<rect fill="#2563eb" height="39" rx="1" width="7" x="240" y="21"></rect>
+<rect fill="#2563eb" height="45" rx="1" width="7" x="250" y="15"></rect>
+<rect fill="#2563eb" height="44" rx="1" width="7" x="260" y="16"></rect>
+<rect fill="#2563eb" height="40" rx="1" width="7" x="270" y="20"></rect>
+<rect fill="#2563eb" height="35" rx="1" width="7" x="280" y="25"></rect>
+<rect fill="#2563eb" height="42" rx="1" width="7" x="290" y="18"></rect>
+<!-- Spike Zone (Payment Gateway Latency & Decline Burst) -->
+<rect fill="#2563eb" height="53" rx="1" width="7" x="300" y="7"></rect>
+<rect fill="#ba1a1a" height="7" rx="0.5" width="7" x="300" y="0"></rect>
+<rect fill="#2563eb" height="55" rx="1" width="7" x="310" y="5"></rect>
+<rect fill="#ba1a1a" height="5" rx="0.5" width="7" x="310" y="0"></rect>
+<rect fill="#2563eb" height="56" rx="1" width="7" x="320" y="4"></rect>
+<rect fill="#ba1a1a" height="4" rx="0.5" width="7" x="320" y="0"></rect>
+<rect fill="#2563eb" height="51" rx="1" width="7" x="330" y="9"></rect>
+<rect fill="#ba1a1a" height="8" rx="0.5" width="7" x="330" y="1"></rect>
+<rect fill="#2563eb" height="48" rx="1" width="7" x="340" y="12"></rect>
+<rect fill="#ba1a1a" height="8" rx="0.5" width="7" x="340" y="4"></rect>
+<!-- Remaining Bars Normalizing -->
+<rect fill="#2563eb" height="43" rx="1" width="7" x="350" y="17"></rect>
+<rect fill="#2563eb" height="38" rx="1" width="7" x="360" y="22"></rect>
+<rect fill="#2563eb" height="34" rx="1" width="7" x="370" y="26"></rect>
+<rect fill="#2563eb" height="39" rx="1" width="7" x="380" y="21"></rect>
+<rect fill="#2563eb" height="42" rx="1" width="7" x="390" y="18"></rect>
+<rect fill="#2563eb" height="46" rx="1" width="7" x="400" y="14"></rect>
+<rect fill="#2563eb" height="41" rx="1" width="7" x="410" y="19"></rect>
+<rect fill="#2563eb" height="36" rx="1" width="7" x="420" y="24"></rect>
+<rect fill="#2563eb" height="44" rx="1" width="7" x="430" y="16"></rect>
+<rect fill="#2563eb" height="47" rx="1" width="7" x="440" y="13"></rect>
+<rect fill="#2563eb" height="42" rx="1" width="7" x="450" y="18"></rect>
+<rect fill="#2563eb" height="38" rx="1" width="7" x="460" y="22"></rect>
+<rect fill="#2563eb" height="40" rx="1" width="7" x="470" y="20"></rect>
+<rect fill="#2563eb" height="45" rx="1" width="7" x="480" y="15"></rect>
+<rect fill="#2563eb" height="48" rx="1" width="7" x="490" y="12"></rect>
+<rect fill="#2563eb" height="46" rx="1" width="7" x="500" y="14"></rect>
+<rect fill="#2563eb" height="42" rx="1" width="7" x="510" y="18"></rect>
+<rect fill="#2563eb" height="37" rx="1" width="7" x="520" y="23"></rect>
+<rect fill="#2563eb" height="33" rx="1" width="7" x="530" y="27"></rect>
+<rect fill="#2563eb" height="39" rx="1" width="7" x="540" y="21"></rect>
+<rect fill="#2563eb" height="44" rx="1" width="7" x="550" y="16"></rect>
+<rect fill="#2563eb" height="46" rx="1" width="7" x="560" y="14"></rect>
+<rect fill="#2563eb" height="41" rx="1" width="7" x="570" y="19"></rect>
+<rect fill="#2563eb" height="38" rx="1" width="7" x="580" y="22"></rect>
+<rect fill="#2563eb" height="45" rx="1" width="7" x="590" y="15"></rect>
+<rect fill="#2563eb" height="48" rx="1" width="7" x="600" y="12"></rect>
+<rect fill="#2563eb" height="43" rx="1" width="7" x="610" y="17"></rect>
+<rect fill="#2563eb" height="40" rx="1" width="7" x="620" y="20"></rect>
+<rect fill="#2563eb" height="35" rx="1" width="7" x="630" y="25"></rect>
+<rect fill="#2563eb" height="42" rx="1" width="7" x="640" y="18"></rect>
+<rect fill="#2563eb" height="46" rx="1" width="7" x="650" y="14"></rect>
+<rect fill="#2563eb" height="49" rx="1" width="7" x="660" y="11"></rect>
+<rect fill="#2563eb" height="44" rx="1" width="7" x="670" y="16"></rect>
+<rect fill="#2563eb" height="39" rx="1" width="7" x="680" y="21"></rect>
+<rect fill="#2563eb" height="37" rx="1" width="7" x="690" y="23"></rect>
+<rect fill="#2563eb" height="45" rx="1" width="7" x="700" y="15"></rect>
+<rect fill="#2563eb" height="48" rx="1" width="7" x="710" y="12"></rect>
+</g>
+<!-- Brush Overlay Indicator (Selected time window 14:26:00 - 14:29:00) -->
+<rect fill="#0053db" fill-opacity="0.12" height="60" stroke="#004ac6" stroke-dasharray="3 3" stroke-width="1.5" width="110" x="290" y="0"></rect>
+<line stroke="#004ac6" stroke-width="2" x1="290" x2="290" y1="0" y2="60"></line>
+<line stroke="#004ac6" stroke-width="2" x1="400" x2="400" y1="0" y2="60"></line>
+</svg>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant font-mono mt-1 pt-1 border-t-0">
+<span>14:15:00 UTC</span>
+<span>14:20:00 UTC</span>
+<span class="text-primary font-semibold">14:26:00 - 14:29:00 (Drilldown Window)</span>
+<span>14:30:00 UTC</span>
+</div>
+</div>
+</div>
+<!-- Main Telemetry Workspace (Split Facets + Grid Table + Detail Drawer) -->
+<div class="grid grid-cols-12 gap-space-md items-start">
+<!-- Left Facet & Field Breakdown Sidebar (3 Cols) -->
+<div class="col-span-12 lg:col-span-3 bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5 font-headline-sm text-headline-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+<span>Facets &amp; Schema</span>
+</div>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-mono">14 indexed</span>
+</div>
+<!-- Facet Search -->
+<div class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">filter_list</span>
+<input class="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm" placeholder="Filter facets..." type="text"/>
+</div>
+<!-- Facet Section: event.name -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+<span>event.type</span>
+</span>
+<span class="text-on-surface-variant font-mono">top 4</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-col p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span class="font-mono font-medium text-on-surface">page_view</span>
+</label>
+<span class="font-mono text-on-surface-variant">42.1%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 42.1%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span class="font-mono font-medium text-on-surface">checkout_started</span>
+</label>
+<span class="font-mono text-on-surface-variant">18.2%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 18.2%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-1.5 rounded-lg bg-error-container/40 hover:bg-error-container/60 cursor-pointer transition-colors">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="rounded text-error focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span class="font-mono font-semibold text-error">order.payment_failed</span>
+</label>
+<span class="font-mono font-bold text-error">0.43%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+<div class="flex flex-col p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+<span class="font-mono font-medium text-on-surface">auth.mfa_challenge</span>
+</label>
+<span class="font-mono text-on-surface-variant">6.5%</span>
+</div>
+<div class="w-full bg-surface-container h-1 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 6.5%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Facet Section: geo.country_code -->
+<div class="flex flex-col gap-1.5 pt-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">public</span>
+<span>geo.country_code</span>
+</span>
+<span class="text-on-surface-variant font-mono">ISO-3166</span>
+</div>
+<div class="space-y-1 font-label-sm text-label-sm">
+<div class="flex items-center justify-between p-1 rounded hover:bg-surface-container cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="w-4 text-center font-mono font-bold text-primary">US</span>
+<span class="text-on-surface font-body-sm text-body-sm">United States</span>
+</div>
+<span class="font-mono text-on-surface-variant">64.2%</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded hover:bg-surface-container cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="w-4 text-center font-mono font-bold text-primary">DE</span>
+<span class="text-on-surface font-body-sm text-body-sm">Germany</span>
+</div>
+<span class="font-mono text-on-surface-variant">14.8%</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded hover:bg-surface-container cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="w-4 text-center font-mono font-bold text-primary">GB</span>
+<span class="text-on-surface font-body-sm text-body-sm">United Kingdom</span>
+</div>
+<span class="font-mono text-on-surface-variant">9.1%</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded hover:bg-surface-container cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="w-4 text-center font-mono font-bold text-primary">JP</span>
+<span class="text-on-surface font-body-sm text-body-sm">Japan</span>
+</div>
+<span class="font-mono text-on-surface-variant">7.3%</span>
+</div>
+</div>
+</div>
+<!-- Facet Section: runtime.client -->
+<div class="flex flex-col gap-1.5 pt-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">devices</span>
+<span>runtime.client</span>
+</span>
+<span class="text-on-surface-variant font-mono">SDK</span>
+</div>
+<div class="space-y-1 font-label-sm text-label-sm">
+<div class="flex items-center justify-between p-1 rounded hover:bg-surface-container cursor-pointer">
+<span class="font-mono text-on-surface">web-browser-v4.11</span>
+<span class="font-mono text-on-surface-variant">54.0%</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded hover:bg-surface-container cursor-pointer">
+<span class="font-mono text-on-surface">android-kotlin-v3.2</span>
+<span class="font-mono text-on-surface-variant">28.5%</span>
+</div>
+<div class="flex items-center justify-between p-1 rounded hover:bg-surface-container cursor-pointer">
+<span class="font-mono text-on-surface">ios-swift-v2.9</span>
+<span class="font-mono text-on-surface-variant">17.5%</span>
+</div>
+</div>
+</div>
+<!-- Facet Section: infrastructure.pod -->
+<div class="flex flex-col gap-1.5 pt-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface font-semibold uppercase tracking-wider">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-on-secondary-container">hub</span>
+<span>k8s.pod_worker</span>
+</span>
+</div>
+<div class="flex flex-wrap gap-1 font-label-sm text-label-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono">east-01</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono">east-02</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-mono font-semibold">east-03 (Err)</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono">east-04</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono">east-05</span>
+</div>
+</div>
+</div>
+<!-- Right Data Table and Inspector Drawer Container (9 Cols) -->
+<div class="col-span-12 lg:col-span-9 flex flex-col gap-space-md">
+<!-- Toolbar above table -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-sm px-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Telemetry Stream</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Showing 42 of 14,892 matched events</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant" title="Toggle Columns" type="button">
+<span class="material-symbols-outlined text-[18px]">view_column</span>
+</button>
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant" title="Download CSV/NDJSON" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<div class="h-4 w-[1px] bg-surface-container-highest"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Auto-scroll</span>
+<input checked="" class="rounded text-primary focus:ring-0 w-3.5 h-3.5" type="checkbox"/>
+</div>
+</div>
+<!-- Split: Data Table + Docked Event Detail Inspector -->
+<div class="grid grid-cols-12 gap-space-md items-start">
+<!-- Log Events Table (Left 7 cols of table area) -->
+<div class="col-span-12 xl:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2 px-2.5 w-6"></th>
+<th class="py-2 px-2.5 font-mono">Timestamp (UTC)</th>
+<th class="py-2 px-2.5">Event Name</th>
+<th class="py-2 px-2.5 font-mono">User / UUID</th>
+<th class="py-2 px-2.5 font-mono">Latency</th>
+<th class="py-2 px-2.5 font-mono">Trace</th>
+</tr>
+</thead>
+<tbody class="font-label-sm text-label-sm divide-y-0">
+<!-- Highlighted Active Row -->
+<tr class="bg-primary-container/10 hover:bg-primary-container/15 cursor-pointer font-medium transition-colors">
+<td class="py-2 px-2.5 text-primary">
+<span class="material-symbols-outlined text-[15px]">arrow_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:11.<span class="text-on-surface-variant">904218</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-mono text-[11px] font-semibold">order.payment_failed</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface truncate max-w-[100px]" title="usr_9b01ae4f12">usr_9b01ae4f12</td>
+<td class="py-2 px-2.5 font-mono text-error font-semibold">352ms</td>
+<td class="py-2 px-2.5 font-mono text-primary truncate max-w-[70px]">tr-8f92a10b</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="py-2 px-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:10.<span class="text-on-surface-variant">883102</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px]">cart.item_added</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[100px]">usr_71cd59b12a</td>
+<td class="py-2 px-2.5 font-mono text-tertiary">14.2ms</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[70px]">tr-21ea8804</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="py-2 px-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:09.<span class="text-on-surface-variant">411903</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-mono text-[11px]">checkout_started</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[100px]">usr_9b01ae4f12</td>
+<td class="py-2 px-2.5 font-mono text-tertiary">22.8ms</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[70px]">tr-998f01b7</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="py-2 px-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:08.<span class="text-on-surface-variant">109844</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-mono text-[11px] font-semibold">order.payment_failed</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[100px]">usr_4401cdef88</td>
+<td class="py-2 px-2.5 font-mono text-error font-semibold">410ms</td>
+<td class="py-2 px-2.5 font-mono text-primary truncate max-w-[70px]">tr-77b5a9cd</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="py-2 px-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:07.<span class="text-on-surface-variant">654920</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px]">auth.mfa_challenge</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[100px]">usr_aa910c2241</td>
+<td class="py-2 px-2.5 font-mono text-tertiary">48.1ms</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[70px]">tr-55d01248</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="py-2 px-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:06.<span class="text-on-surface-variant">004812</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px]">page_view</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[100px]">usr_11a884fe02</td>
+<td class="py-2 px-2.5 font-mono text-tertiary">8.4ms</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[70px]">tr-19bc3031</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="py-2 px-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:05.<span class="text-on-surface-variant">781042</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px]">inventory.stock_reserve</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[100px]">usr_9b01ae4f12</td>
+<td class="py-2 px-2.5 font-mono text-tertiary">19.0ms</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[70px]">tr-8f92a10a</td>
+</tr>
+<!-- Row 8 -->
+<tr class="hover:bg-surface-container-low cursor-pointer transition-colors">
+<td class="py-2 px-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface whitespace-nowrap">
+                    14:28:04.<span class="text-on-surface-variant">219803</span>
+</td>
+<td class="py-2 px-2.5">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-mono text-[11px]">session.heartbeat</span>
+</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[100px]">usr_ee33b11099</td>
+<td class="py-2 px-2.5 font-mono text-tertiary">5.2ms</td>
+<td class="py-2 px-2.5 font-mono text-on-surface-variant truncate max-w-[70px]">tr-0044fa91</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Bottom Pagination Controls -->
+<div class="flex items-center justify-between p-space-sm px-space-md bg-surface-container-low font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-mono">Cluster Partition: <strong class="text-on-surface">prod_shard_03 (us-east-1a)</strong></span>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[16px]">first_page</span></button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[16px]">chevron_left</span></button>
+<span class="px-2 py-0.5 rounded bg-surface-container font-mono font-bold text-on-surface">Page 1 / 355</span>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[16px]">chevron_right</span></button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant" type="button"><span class="material-symbols-outlined text-[16px]">last_page</span></button>
+</div>
+</div>
+</div>
+<!-- Right Docked Event Detail Inspector (5 cols) -->
+<div class="col-span-12 xl:col-span-5 bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<!-- Drawer Header -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-mono font-bold text-label-sm text-[11px]">
+                  order.payment_failed
+                </span>
+<span class="font-label-sm text-label-sm text-error font-mono font-semibold">HTTP 402</span>
+</div>
+<span class="font-mono text-on-surface-variant text-[11px] mt-1">ID: evt_01HV998QW82X1002M9</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Copy Event JSON" type="button">
+<span class="material-symbols-outlined text-[16px]">file_copy</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Open in Full Screen" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Inspector Tabs -->
+<div class="flex items-center gap-2 border-b-0 bg-surface-container-low p-1 rounded-lg font-label-sm text-label-sm">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs" type="button">
+              Raw JSON
+            </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface" type="button">
+              Schema (Protobuf)
+            </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1" type="button">
+              Trace (OTel)
+              <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface" type="button">
+              Client Context
+            </button>
+</div>
+<!-- Schema Validation Banner -->
+<div class="flex items-center justify-between p-2 rounded-lg bg-tertiary/10 text-tertiary font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-mono font-semibold">Schema: proto_v4_payment_event</span>
+</div>
+<span class="px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary font-mono text-[10px]">VALID (0 VIOLATIONS)</span>
+</div>
+<!-- High-Contrast Syntax Highlighted JSON Tree -->
+<div class="relative bg-surface-container-low rounded-lg p-3 overflow-x-auto max-h-[380px] font-mono text-[12px] leading-5 select-text shadow-inner">
+<pre class="m-0 text-on-surface"><code>{
+  <span class="text-primary font-semibold">"@timestamp"</span>: <span class="text-tertiary">"2025-05-12T14:28:11.904218Z"</span>,
+  <span class="text-primary font-semibold">"event_name"</span>: <span class="text-error font-semibold">"order.payment_failed"</span>,
+  <span class="text-primary font-semibold">"schema_version"</span>: <span class="text-on-surface-variant">"2.4.0"</span>,
+  <span class="text-primary font-semibold">"trace_id"</span>: <span class="text-primary">"tr-8f92a10b4c8100f9"</span>,
+  <span class="text-primary font-semibold">"span_id"</span>: <span class="text-on-surface-variant">"sp-4491ba01"</span>,
+  <span class="text-primary font-semibold">"user"</span>: {
+    <span class="text-primary font-semibold">"id"</span>: <span class="text-tertiary">"usr_9b01ae4f12"</span>,
+    <span class="text-primary font-semibold">"email_hash"</span>: <span class="text-on-surface-variant">"e3b0c44298fc1c149afbf4c8"</span>,
+    <span class="text-primary font-semibold">"cohort"</span>: <span class="text-on-surface-variant">"enterprise_annual"</span>,
+    <span class="text-primary font-semibold">"risk_score"</span>: <span class="text-error">0.08</span>
+  },
+  <span class="text-primary font-semibold">"properties"</span>: {
+    <span class="text-primary font-semibold">"order_id"</span>: <span class="text-tertiary">"ord_live_89104812"</span>,
+    <span class="text-primary font-semibold">"currency"</span>: <span class="text-on-surface-variant">"USD"</span>,
+    <span class="text-primary font-semibold">"checkout_total"</span>: <span class="text-primary font-bold">1890.00</span>,
+    <span class="text-primary font-semibold">"payment_gateway"</span>: <span class="text-tertiary">"stripe_connect_v2"</span>,
+    <span class="text-primary font-semibold">"gateway_status"</span>: <span class="text-error font-semibold">"decline"</span>,
+    <span class="text-primary font-semibold">"decline_code"</span>: <span class="text-error font-bold">"insufficient_funds"</span>,
+    <span class="text-primary font-semibold">"retry_attempt"</span>: <span class="text-primary">2</span>,
+    <span class="text-primary font-semibold">"latency_breakdown_ms"</span>: {
+      <span class="text-primary font-semibold">"vault_tokenization"</span>: <span class="text-tertiary">12</span>,
+      <span class="text-primary font-semibold">"bank_network_hop"</span>: <span class="text-error">340</span>
+    }
+  },
+  <span class="text-primary font-semibold">"runtime"</span>: {
+    <span class="text-primary font-semibold">"client_ip"</span>: <span class="text-on-surface-variant">"198.51.100.42"</span>,
+    <span class="text-primary font-semibold">"geo_country"</span>: <span class="text-tertiary">"US"</span>,
+    <span class="text-primary font-semibold">"user_agent"</span>: <span class="text-on-surface-variant">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)..."</span>,
+    <span class="text-primary font-semibold">"edge_node"</span>: <span class="text-on-surface-variant">"iad-edge-04"</span>
+  }
+}</code></pre>
+</div>
+<!-- Quick Actions Panel -->
+<div class="flex items-center justify-between pt-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">account_tree</span>
+<span>Open Trace Waterfall</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-error">notification_important</span>
+<span>Trigger Test Alert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client Behavior for Stream Toggle -->
+<script>
+    const streamBtn = document.getElementById('live-stream-btn');
+    let isStreaming = true;
+    if (streamBtn) {
+      streamBtn.addEventListener('click', () => {
+        isStreaming = !isStreaming;
+        if (!isStreaming) {
+          streamBtn.classList.remove('bg-tertiary', 'text-on-tertiary');
+          streamBtn.classList.add('bg-surface-container', 'text-on-surface-variant');
+          streamBtn.innerHTML = '<span class="material-symbols-outlined text-[15px]">pause_circle</span><span>Stream Paused</span>';
+        } else {
+          streamBtn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          streamBtn.classList.add('bg-tertiary', 'text-on-tertiary');
+          streamBtn.innerHTML = '<span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-on-tertiary"></span></span><span>Live Tail (ON)</span>';
+        }
+      });
+    }
+  </script>
+</div></main></div></body></html>

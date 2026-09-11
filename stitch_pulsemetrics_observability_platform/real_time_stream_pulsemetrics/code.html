@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#d3e4fe","inverse-surface":"#213145","secondary-fixed":"#dfe2ef","tertiary-fixed-dim":"#4edea3","secondary-container":"#dcdfed","on-secondary":"#ffffff","on-surface-variant":"#434655","primary-container":"#2563eb","surface-tint":"#0053db","primary":"#004ac6","on-secondary-container":"#5f626e","inverse-on-surface":"#eaf1ff","error":"#ba1a1a","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","on-primary-container":"#eeefff","on-tertiary-fixed-variant":"#005236","surface":"#f8f9ff","on-surface":"#0b1c30","primary-fixed-dim":"#b4c5ff","surface-container":"#e5eeff","tertiary":"#006242","tertiary-container":"#007d55","on-primary-fixed-variant":"#003ea8","secondary-fixed-dim":"#c3c6d3","on-tertiary-fixed":"#002113","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","on-background":"#0b1c30","secondary":"#5a5e69","error-container":"#ffdad6","surface-bright":"#f8f9ff","tertiary-fixed":"#6ffbbe","primary-fixed":"#dbe1ff","inverse-primary":"#b4c5ff","on-secondary-fixed":"#181b25","on-primary":"#ffffff","on-secondary-fixed-variant":"#434751","outline":"#737686","surface-container-lowest":"#ffffff","on-primary-fixed":"#00174b","on-error-container":"#93000a","outline-variant":"#c3c6d7","on-error":"#ffffff","background":"#f8f9ff","surface-container-low":"#eff4ff","on-tertiary-container":"#bdffdb"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"0.75rem","space-lg":"1rem","space-sm":"0.375rem","space-md":"0.75rem","space-xl":"1.5rem","margin":"1.25rem","space-xs":"0.25rem"},fontFamily:{"label-lg":["JetBrains Mono"],"headline-md":["Inter"],"body-md":["Inter"],"body-sm":["Inter"],"label-sm":["JetBrains Mono"],"headline-sm":["Inter"],"label-md":["JetBrains Mono"],"body-lg":["Inter"],"headline-lg":["Inter"]},fontSize:{"label-lg":["13px",{lineHeight:"16px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-md":["18px",{lineHeight:"24px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"400"}],"headline-sm":["14px",{lineHeight:"20px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0",fontWeight:"500"}],"body-lg":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between select-none shadow-md"><div class="flex flex-col h-full overflow-hidden"><div class="p-space-md pb-space-sm"><div class="flex items-center justify-between gap-space-xs mb-space-sm"><div class="flex items-center gap-space-xs"><img alt="PulseMetrics Brand Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XcFHIvOm5fKyR84maeHkRhCFOAaFesuLJZqBDCtO_Xc6ZJAmdkmzsn5NbzhM6QpSl0ziO-VZRjmZCiay644MJKewEHJZ3KWo2Pm1nYDYJ-24kK1iRqYVdslPf5Mzw4Zdb-uIJVYsTN2Z2KnPErTXYqmVC-QRefO394lIz5g6nDPJfvV8BF4BK3UUtz04ajPaAyV0UDEs1fWEwG3Z9MCdS4yyMBB4x8hGL3l3kGIQES8AoZHlwE8ZKRsw"/><span class="font-headline-sm text-headline-sm text-surface font-bold tracking-tight">PulseMetrics</span></div><span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-surface/10 text-tertiary-fixed font-mono border border-surface/10">v2.4.1</span></div><button class="w-full flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 hover:bg-surface/10 text-inverse-on-surface font-label-md text-label-md transition-colors" type="button"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-tertiary-fixed"></span><span class="font-mono font-medium text-surface">acme-prod</span></div><span class="material-symbols-outlined text-[16px] text-surface-variant">unfold_more</span></button><div class="mt-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface/5 text-surface-variant font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[15px]">search</span><span>Quick jump...</span></div><kbd class="px-1.5 py-0.5 rounded bg-surface/10 text-inverse-on-surface font-mono text-[10px]">⌘K</kbd></div></div></div><nav class="flex-1 overflow-y-auto px-space-sm py-space-xs space-y-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Overview</div><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-1.5 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="real-time" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">sensors</span><span>Real-Time</span></div><span class="flex h-2 w-2 relative"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-fixed"></span></span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="events" href="#"><span class="material-symbols-outlined text-[18px]">account_tree</span><span>Events</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="sessions" href="#"><span class="material-symbols-outlined text-[18px]">group</span><span>Sessions</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="users" href="#"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Users</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Analytics</div><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="acquisition" href="#"><span class="material-symbols-outlined text-[18px]">explore</span><span>Acquisition</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="engagement" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span>Engagement</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="retention" href="#"><span class="material-symbols-outlined text-[18px]">cached</span><span>Retention</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="funnels" href="#"><span class="material-symbols-outlined text-[18px]">filter_alt</span><span>Funnels</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="conversion" href="#"><span class="material-symbols-outlined text-[18px]">ads_click</span><span>Conversion</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Monitoring</div><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="live-events" href="#"><span class="material-symbols-outlined text-[18px]">bolt</span><span>Live Events</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="system-health" href="#"><span class="material-symbols-outlined text-[18px]">memory</span><span>System Health</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="event-pipeline" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span><span>Event Pipeline</span></a><a class="flex items-center justify-between px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="alerts" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[18px]">notifications_active</span><span>Alerts</span></div><span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm leading-none font-bold">1</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Developer</div><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="projects" href="#"><span class="material-symbols-outlined text-[18px]">source</span><span>Projects</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="sdk" href="#"><span class="material-symbols-outlined text-[18px]">terminal</span><span>SDK</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="api-keys" href="#"><span class="material-symbols-outlined text-[18px]">key</span><span>API Keys</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="webhooks" href="#"><span class="material-symbols-outlined text-[18px]">webhook</span><span>Webhooks</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="documentation" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span>Documentation</span></a></div><div class="space-y-0.5"><div class="px-space-sm py-1 font-label-sm text-label-sm font-semibold tracking-wider text-surface-variant/70 uppercase">Management</div><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="team" href="#"><span class="material-symbols-outlined text-[18px]">badge</span><span>Team</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span><span>Settings</span></a><a class="flex items-center gap-2.5 px-space-sm py-1.5 rounded-lg text-surface-variant hover:bg-surface/10 hover:text-surface transition-colors font-body-md text-body-md" data-path="billing" href="#"><span class="material-symbols-outlined text-[18px]">credit_card</span><span>Billing</span></a></div></nav></div><div class="p-space-sm bg-inverse-surface/80"><div class="px-space-sm py-1.5 mb-1.5 rounded bg-surface/5 flex items-center justify-between font-label-sm text-label-sm text-surface-variant"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[14px] text-tertiary-fixed">corporate_fare</span><span class="text-inverse-on-surface font-medium">Acme Corp</span><span class="text-[10px] uppercase font-mono px-1 py-0.2 rounded bg-surface/10 text-primary-fixed">Pro</span></div><span class="material-symbols-outlined text-[14px]">expand_more</span></div><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg hover:bg-surface/10 transition-colors cursor-pointer"><div class="flex items-center gap-2"><div class="relative"><div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-headline-sm text-headline-sm text-primary font-bold">AC</div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tertiary-fixed border-2 border-inverse-surface rounded-full"></span></div><div class="flex flex-col"><span class="font-headline-sm text-[12px] leading-tight text-surface font-semibold">Alex Chen</span><span class="font-label-sm text-[10px] leading-tight text-surface-variant font-mono">Staff Infra Eng</span></div></div><span class="material-symbols-outlined text-[16px] text-surface-variant">more_vert</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-14 bg-surface/90 backdrop-blur-md z-40 px-6 flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="PulseMetrics Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XcFHIvOm5fKyR84maeHkRhCFOAaFesuLJZqBDCtO_Xc6ZJAmdkmzsn5NbzhM6QpSl0ziO-VZRjmZCiay644MJKewEHJZ3KWo2Pm1nYDYJ-24kK1iRqYVdslPf5Mzw4Zdb-uIJVYsTN2Z2KnPErTXYqmVC-QRefO394lIz5g6nDPJfvV8BF4BK3UUtz04ajPaAyV0UDEs1fWEwG3Z9MCdS4yyMBB4x8hGL3l3kGIQES8AoZHlwE8ZKRsw"/><div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant font-mono"><span class="text-on-surface">cluster-east</span><span class="text-outline-variant">/</span><span>ingestion-pool</span><span class="text-outline-variant">/</span><span class="text-primary font-semibold">telemetry</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-2 px-2.5 py-1 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-mono"><span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span><span>18,421 ev/s</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-mono"><span class="material-symbols-outlined text-[14px]">public</span><span>us-east-1 (p99: 14ms)</span></div><div class="flex items-center gap-space-xs"><button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">help_outline</span></button><button class="relative p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-14 bg-surface min-h-screen px-7 py-7"><div class="flex flex-col w-full gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Real-Time</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+          SYNCED (500ms)
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Monitor events and active users as they happen across your global edge nodes.
+      </p>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center bg-surface-container-high rounded-xl p-0.5">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md transition-all" id="streamToggleBtn" onclick="toggleStream()">
+<span class="material-symbols-outlined text-[16px]" id="streamIcon">pause</span>
+<span id="streamText">Streaming</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" onclick="clearStream()">
+<span class="material-symbols-outlined text-[16px]">layers_clear</span>
+<span>Clear</span>
+</button>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-surface-tint transition-all">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Raw</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 translate-x-3 -translate-y-3 w-20 h-20 bg-tertiary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Live Users</span>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-mono">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          active
+        </div>
+</div>
+<div class="my-3 flex items-baseline justify-between">
+<span class="font-label-lg text-[28px] leading-tight font-bold text-on-surface tracking-tight" id="metricLiveUsers">2,847</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">+14.2%</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Active in last 5m</span>
+<span class="font-mono text-on-surface">32 clusters</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="absolute right-0 top-0 translate-x-3 -translate-y-3 w-20 h-20 bg-primary/5 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Ingestion Rate</span>
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span>
+</div>
+<div class="my-3 flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-lg text-[28px] leading-tight font-bold text-on-surface tracking-tight" id="metricRate">18,421</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ev/min</span>
+</div>
+<span class="font-mono font-label-sm text-label-sm text-on-surface-variant">307 ev/s</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>p99 latency</span>
+<span class="font-mono font-semibold text-primary">12ms</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Ingestion Health</span>
+<span class="px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold">NOMINAL</span>
+</div>
+<div class="my-3 flex items-baseline justify-between">
+<span class="font-label-lg text-[28px] leading-tight font-bold text-on-surface tracking-tight">98.7%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">0.03% drop</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 98.7%;"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md flex flex-col justify-between shadow-sm relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">SDK Connections</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">hub</span>
+</div>
+<div class="my-3 flex items-baseline justify-between">
+<span class="font-label-lg text-[28px] leading-tight font-bold text-on-surface tracking-tight" id="metricSockets">3,912</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">WSS Active</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Node heartbeat</span>
+<span class="font-mono text-tertiary font-semibold">100% ok</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">Events Per Minute</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">(Last 30 Minutes)</span>
+</div>
+<div class="flex items-center gap-4 mt-1">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary"></span>
+<span>page_view</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-tint"></span>
+<span>click</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span>purchase</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary"></span>
+<span>custom</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="px-2.5 py-1 rounded-lg bg-surface-container font-label-sm text-label-sm font-mono text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-error">trending_up</span>
+<span>Peak: <strong>420 ev/s</strong> at 14:18:22 UTC</span>
+</div>
+</div>
+</div>
+<div class="w-full h-28 relative flex items-end">
+<div class="w-full h-full flex items-end gap-1.5 pt-4" id="chartContainer"></div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm font-mono px-1">
+<span>-30m</span>
+<span>-20m</span>
+<span>-10m</span>
+<span>-5m</span>
+<span class="text-primary font-semibold">NOW (Live)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-2 flex-1">
+<div class="relative min-w-[240px] flex-1 max-w-sm">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline">search</span>
+<input class="w-full pl-8 pr-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-label-md text-label-md focus:bg-surface-container-lowest focus:outline-none transition-all" id="searchInput" placeholder="Filter by user_id, path, or IP..." type="text"/>
+</div>
+<select class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer" id="filterType">
+<option value="all">All Event Types</option>
+<option value="page_view">page_view</option>
+<option value="button_click">button_click</option>
+<option value="purchase">purchase</option>
+<option value="custom_event">custom_event</option>
+<option value="session_start">session_start</option>
+<option value="signup_completed">signup_completed</option>
+</select>
+<select class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer">
+<option>All Regions</option>
+<option>North America (us-east/west)</option>
+<option>Europe (eu-central)</option>
+<option>Asia Pacific (ap-southeast)</option>
+</select>
+<select class="px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md focus:outline-none cursor-pointer">
+<option>All Clients</option>
+<option>Chrome / Windows</option>
+<option>Safari / macOS</option>
+<option>Firefox / Linux</option>
+<option>Mobile SDK</option>
+</select>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-3">
+<span class="font-label-sm text-label-sm font-mono text-on-surface-variant">
+          Showing <span class="font-semibold text-on-surface" id="visibleCount">7</span> of 18,421 events/min
+        </span>
+<div class="flex items-center gap-1.5">
+<button class="p-1.5 rounded-lg bg-surface-container text-primary font-label-sm text-label-sm flex items-center gap-1" id="autoscrollBtn" onclick="toggleAutoScroll()" title="Lock stream to bottom">
+<span class="material-symbols-outlined text-[16px]">vertical_align_bottom</span>
+<span class="hidden sm:inline">Auto-scroll</span>
+</button>
+<select class="px-2 py-1 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm font-mono">
+<option>Buffer 50</option>
+<option selected="">Buffer 100</option>
+<option>Buffer 500</option>
+</select>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3">Time (UTC)</th>
+<th class="py-2.5 px-3">Event Name</th>
+<th class="py-2.5 px-3">Identity</th>
+<th class="py-2.5 px-3">Geo / Origin</th>
+<th class="py-2.5 px-3">Client</th>
+<th class="py-2.5 px-3">URL Path</th>
+<th class="py-2.5 px-3 text-right">p99</th>
+<th class="py-2.5 px-3">Payload Details</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-mono" id="streamTableBody">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">12:42:31.420</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">page_view</span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface">user_8f42a1 <span class="text-on-surface-variant/60">(anon)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">🇮🇩 Jakarta, ID <span class="text-[10px] opacity-70">(103.28.x.x)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">Chrome 122 / Win 11</td>
+<td class="py-2 px-3 whitespace-nowrap text-primary font-semibold">/pricing</td>
+<td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold">9ms</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs">{"plan_viewed":"enterprise"}</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">12:42:30.892</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold">button_click</span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface">user_a912ff <span class="text-tertiary font-bold">(Auth)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">🇸🇬 Singapore, SG <span class="text-[10px] opacity-70">(49.12.x.x)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">Safari 17.4 / macOS</td>
+<td class="py-2 px-3 whitespace-nowrap text-primary font-semibold">/checkout</td>
+<td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold">14ms</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs">{"btn_id":"cta_pay_now"}</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">12:42:29.980</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">purchase</span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface">user_31ab42 <span class="text-primary font-bold">(Pro)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">🇺🇸 New York, US <span class="text-[10px] opacity-70">(64.233.x.x)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">Chrome 122 / Win 11</td>
+<td class="py-2 px-3 whitespace-nowrap text-primary font-semibold">/checkout/success</td>
+<td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold">11ms</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs">{"amount":149,"currency":"USD"}</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">12:42:29.112</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">custom_event</span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface">user_c41099 <span class="text-on-surface-variant/60">(anon)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">🇩🇪 Frankfurt, DE <span class="text-[10px] opacity-70">(194.25.x.x)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">Firefox 123 / Linux</td>
+<td class="py-2 px-3 whitespace-nowrap text-primary font-semibold">/docs/api/v2</td>
+<td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold">12ms</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs">{"query":"rate_limit"}</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">12:42:28.450</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">page_view</span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface">user_18ff22 <span class="text-on-surface-variant/60">(anon)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">🇯🇵 Tokyo, JP <span class="text-[10px] opacity-70">(133.242.x.x)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">Safari / iOS 17</td>
+<td class="py-2 px-3 whitespace-nowrap text-primary font-semibold">/blog/scaling-kafka</td>
+<td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold">8ms</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs">{"referrer":"twitter.com"}</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">12:42:27.910</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm font-semibold">session_start</span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface">user_92ba77 <span class="text-on-surface-variant/60">(anon)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">🇬🇧 London, GB <span class="text-[10px] opacity-70">(212.58.x.x)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">Edge 122 / Win 11</td>
+<td class="py-2 px-3 whitespace-nowrap text-primary font-semibold">/</td>
+<td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold">15ms</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs">{"utm_campaign":"q3_launch"}</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">12:42:27.100</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2 py-0.5 rounded bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold">signup_completed</span>
+</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface">user_71cc83 <span class="text-tertiary font-bold">(New)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">🇨🇦 Toronto, CA <span class="text-[10px] opacity-70">(142.250.x.x)</span></td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant">Chrome 122 / macOS</td>
+<td class="py-2 px-3 whitespace-nowrap text-primary font-semibold">/auth/callback</td>
+<td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold">13ms</td>
+<td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs">{"method":"github_oauth"}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-space-md py-2 bg-surface-container-low flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Pipeline: <strong class="text-on-surface font-mono">kafka-east-broker-04</strong></span>
+</div>
+<div class="flex items-center gap-4">
+<span>Drop-rate: <strong class="font-mono text-tertiary">0.00%</strong></span>
+<span>Network in: <strong class="font-mono text-on-surface">42.8 MB/s</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let isStreaming = true;
+  let autoScroll = true;
+  let timerId = null;
+
+  const sampleEvents = [
+    { type: 'page_view', badgeBg: 'bg-primary/10 text-primary', user: 'user_40e9bc', tag: '(anon)', geo: '🇫🇷 Paris, FR', ip: '195.154.x.x', client: 'Chrome 122 / macOS', path: '/features', lat: '9ms', payload: '{"source":"organic"}' },
+    { type: 'button_click', badgeBg: 'bg-tertiary/15 text-tertiary', user: 'user_22bfa8', tag: '(Auth)', geo: '🇳🇱 Amsterdam, NL', ip: '185.220.x.x', client: 'Safari 17 / iOS', path: '/billing/upgrade', lat: '12ms', payload: '{"tier":"enterprise"}' },
+    { type: 'purchase', badgeBg: 'bg-secondary-container text-on-secondary-container', user: 'user_9918bc', tag: '(Pro)', geo: '🇦🇺 Sydney, AU', ip: '139.130.x.x', client: 'Edge 121 / Windows', path: '/checkout/token', lat: '16ms', payload: '{"amount":299,"currency":"USD"}' },
+    { type: 'custom_event', badgeBg: 'bg-surface-container-high text-on-surface', user: 'user_7718de', tag: '(anon)', geo: '🇰🇷 Seoul, KR', ip: '211.234.x.x', client: 'Chrome 122 / Android', path: '/api/v1/metrics', lat: '7ms', payload: '{"event":"telemetry_flush"}' }
+  ];
+
+  function renderHistogram() {
+    const container = document.getElementById('chartContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    const barCount = 36;
+    for (let i = 0; i < barCount; i++) {
+      const bar = document.createElement('div');
+      bar.className = 'flex-1 flex flex-col justify-end gap-0.5 h-full group relative cursor-pointer';
+      
+      const totalH = Math.floor(Math.random() * 55) + 30;
+      const h1 = Math.floor(totalH * 0.45);
+      const h2 = Math.floor(totalH * 0.25);
+      const h3 = Math.floor(totalH * 0.15);
+      const h4 = totalH - (h1 + h2 + h3);
+
+      bar.innerHTML = `
+        <div class="w-full bg-tertiary rounded-t-xs transition-all duration-300" style="height: ${h4}%;"></div>
+        <div class="w-full bg-secondary transition-all duration-300" style="height: ${h3}%;"></div>
+        <div class="w-full bg-surface-tint transition-all duration-300" style="height: ${h2}%;"></div>
+        <div class="w-full bg-primary transition-all duration-300" style="height: ${h1}%;"></div>
+      `;
+      container.appendChild(bar);
+    }
+  }
+
+  function addStreamRow() {
+    if (!isStreaming) return;
+    const tbody = document.getElementById('streamTableBody');
+    if (!tbody) return;
+
+    const event = sampleEvents[Math.floor(Math.random() * sampleEvents.length)];
+    const now = new Date();
+    const ms = String(now.getMilliseconds()).padStart(3, '0');
+    const timeStr = `${String(now.getUTCHours()).padStart(2, '0')}:${String(now.getUTCMinutes()).padStart(2, '0')}:${String(now.getUTCSeconds()).padStart(2, '0')}.${ms}`;
+
+    const tr = document.createElement('tr');
+    tr.className = 'hover:bg-surface-container-low/60 transition-colors bg-surface-container-lowest animate-fadeIn';
+    tr.innerHTML = `
+      <td class="py-2 px-3 whitespace-nowrap text-on-surface-variant font-mono">${timeStr}</td>
+      <td class="py-2 px-3 whitespace-nowrap">
+        <span class="px-2 py-0.5 rounded ${event.badgeBg} font-label-sm text-label-sm font-semibold">${event.type}</span>
+      </td>
+      <td class="py-2 px-3 whitespace-nowrap text-on-surface font-mono">${event.user} <span class="text-on-surface-variant/60 font-body-sm">${event.tag}</span></td>
+      <td class="py-2 px-3 whitespace-nowrap text-on-surface-variant font-mono">${event.geo} <span class="text-[10px] opacity-70">(${event.ip})</span></td>
+      <td class="py-2 px-3 whitespace-nowrap text-on-surface-variant font-mono">${event.client}</td>
+      <td class="py-2 px-3 whitespace-nowrap text-primary font-semibold font-mono">${event.path}</td>
+      <td class="py-2 px-3 whitespace-nowrap text-right text-tertiary font-semibold font-mono">${event.lat}</td>
+      <td class="py-2 px-3 whitespace-nowrap text-on-surface-variant truncate max-w-xs font-mono">${event.payload}</td>
+    `;
+
+    tbody.insertBefore(tr, tbody.firstChild);
+
+    if (tbody.children.length > 50) {
+      tbody.removeChild(tbody.lastChild);
+    }
+
+    const visibleCount = document.getElementById('visibleCount');
+    if (visibleCount) visibleCount.innerText = tbody.children.length;
+
+    const rate = document.getElementById('metricRate');
+    if (rate) {
+      const current = parseInt(rate.innerText.replace(',', ''), 10);
+      rate.innerText = (current + Math.floor(Math.random() * 5 - 2)).toLocaleString();
+    }
+  }
+
+  function toggleStream() {
+    isStreaming = !isStreaming;
+    const icon = document.getElementById('streamIcon');
+    const text = document.getElementById('streamText');
+    const btn = document.getElementById('streamToggleBtn');
+
+    if (isStreaming) {
+      icon.innerText = 'pause';
+      text.innerText = 'Streaming';
+      btn.classList.add('text-primary');
+      startTimer();
+    } else {
+      icon.innerText = 'play_arrow';
+      text.innerText = 'Paused';
+      btn.classList.remove('text-primary');
+      clearInterval(timerId);
+    }
+  }
+
+  function toggleAutoScroll() {
+    autoScroll = !autoScroll;
+    const btn = document.getElementById('autoscrollBtn');
+    if (autoScroll) {
+      btn.classList.add('bg-surface-container', 'text-primary');
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+    } else {
+      btn.classList.remove('bg-surface-container', 'text-primary');
+      btn.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+    }
+  }
+
+  function clearStream() {
+    const tbody = document.getElementById('streamTableBody');
+    if (tbody) tbody.innerHTML = '';
+    const visibleCount = document.getElementById('visibleCount');
+    if (visibleCount) visibleCount.innerText = '0';
+  }
+
+  function startTimer() {
+    clearInterval(timerId);
+    timerId = setInterval(addStreamRow, 900);
+  }
+
+  renderHistogram();
+  startTimer();
+</script></main></div></body></html>
